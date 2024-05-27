@@ -1,0 +1,432 @@
+@import url('https://fonts.googleapis.com/css2?family=Commissioner:wght@100..900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --Moderate-cyan: hsl(176, 50%, 47%);
+    --Dark-cyan: hsl(176, 72%, 28%);
+    --Black: hsl(0, 0%, 0%);
+    --Dark-gray: hsl(0, 0%, 48%);
+}
+
+body {
+    font-family: "Commissioner", sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: hsla(0, 0%, 98%, 1);
+}
+
+.bg {
+    content: url(./images/image-hero-mobile.jpg);
+    width: 100%;
+    position: absolute;
+    top: 0;
+    z-index: -100;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 40px;
+    gap: 40px;
+    padding-top: 200px;
+}
+
+.heading-container,.stat-container,.about-container {
+    text-align: center;
+    background-color: white;
+    padding: 40px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    width: 100%;
+}
+
+.heading-container p,.stat-container p{
+    font-weight: 400;
+    color: var(--Dark-gray);
+}
+
+.stat-container hr {
+    width: 50%;
+    border-color: var(--Dark-gray);
+    opacity:25%;
+}
+
+.heading-container h1 {
+    font-weight: 700;
+    color: var(--Dark-gray);
+}
+
+.stat-1,.stat-2,.stat-3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.primary-button {
+    padding: 15px 20px;
+    background-color: var(--Moderate-cyan);
+    color: white;
+    font-weight: 700;
+    border-radius: 5000px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bookmark {
+    display: flex;
+    gap: 10px;
+    border-radius: 5000px;
+    justify-content: center;
+    align-items: center;
+    background-color: hsla(0, 0%, 96%, 1);
+}
+
+.bookmark p {
+    display: none;
+}
+
+.main-button {
+    display: flex;
+    
+    align-items: center;
+    gap: 10px;
+}
+
+.about-container {
+    text-align: left;   
+    align-items: flex-start;
+}
+
+.info {
+    font-weight: 400;
+    color: var(--Dark-gray);
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid var(--Moderate-cyan);
+    color: var(--Dark-gray);
+}
+
+.card-heading,.option-heading {
+    font-weight: 700;
+    color: var(--Black);
+}
+
+.secondary-info {
+    color: var(--Moderate-cyan);
+}
+
+.numbering {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.part-3 {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.part-1 {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.numbering h1,h2{
+    color: var(--Black);
+}
+
+.logo {
+    position: relative;
+    top: -65px;
+    margin-bottom: -65px;
+}
+
+.card-3 {
+    opacity: 0.25;
+}
+
+.card-3 .primary-button {
+    background-color: var(--Dark-gray);
+    opacity: 1;
+}
+
+.modal-page {
+    border: 0;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background-color: white;
+    gap: 40px;
+    border-radius: 10px;
+}
+
+dialog::backdrop {
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+dialog {
+    position: absolute;
+    top: 100px;
+    left: 10%;
+    width: 80%;
+    border: 0;
+}
+
+#modal1 {
+    border-radius: 10px;
+    overflow: visible;
+}
+
+.modal-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.options {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+span {
+    color: var(--Black);
+    font-weight: 700;
+}
+
+.selected {
+    display: none;
+}
+
+.selected.active {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+}
+
+.pledge {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10%;
+}
+
+.input {
+    text-align: center;
+    border: 1px solid var(--Dark-gray);
+    padding:15px 30px;
+    border-radius: 50000px;
+    font-weight: 700;
+    color: var(--Black);
+    min-width: fit-content;
+    width: 40%;
+}
+
+.input span {
+    color: var(--Dark-gray);
+}
+
+.option-heading-container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.card.active {
+    border: 2px solid var(--Moderate-cyan);
+}
+
+.option-4 {
+    opacity: 0.25;
+}
+
+.modal-success-page {
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+}
+
+.modal-success-page p {
+    color: var(--Dark-gray);
+}
+
+#modal2 {
+    border-radius: 10px;
+    overflow: hidden;
+    max-height: fit-content;
+}
+
+.progress-bar {
+    width: 110%;
+    background-color: hsla(340, 14%, 96%, 1);
+    height: 10px;
+    border-radius: 10000px;
+    position: relative;
+}
+
+.progress {
+    width: 70%;
+    background-color: var(--Moderate-cyan);
+    height: 10px;
+    border-radius: 10000px;
+}
+
+.stats {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.stat-1,.stat-2 {
+    border-bottom: 1px solid var(--Dark-gray);
+    padding-bottom: 20px;
+}
+
+.navbar {
+    padding: 40px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    color: white;
+}
+
+.navbar p {
+    font-family: "Commissioner", sans-serif;
+}
+
+.menu {
+    display: none;
+}
+
+.ham-icon {
+    content: url(./images/icon-hamburger.svg);
+}
+
+.ham-icon.active {
+    content: url(./images/icon-close-menu.svg);
+}
+
+.off-screen-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-weight: 600;
+    gap: 30px;
+    color: var(--Black);
+    font-weight: 700;
+    height: fit-content;
+    width: 80%;
+    max-width: 375px;
+    position: fixed;
+    top: 90px;
+    right: -500px;
+    padding: 30px;
+    background-color: white;
+    z-index: 1000;
+    border-radius: 10px;
+}
+
+.off-screen-menu.active {
+    left: 10%;
+}
+
+@media (min-width:375px) {
+
+    .ham-icon {
+        display: none;
+    }
+
+    .navbar {
+        width: 70%;
+    }
+      
+    .menu {
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+        align-items: center;
+        font-family: "Barlow";
+        color:var(--White)
+      }
+      
+    .off-screen-menu {
+        display: none;
+    }
+    
+    .bg {
+        content: url(./images/image-hero-desktop.jpg);
+    }
+
+    main {
+        width: 70%;
+    }
+
+    .bookmark p {
+        display: block;
+        padding-right: 20px;
+        font-weight: 700;
+    }
+
+    .stat-container {
+        flex-direction: column;
+    }
+
+    .stats {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+    }
+
+    .stat-1,.stat-2 {
+        border-bottom: 0;
+        border-right: 1px solid var(--Dark-gray);
+        padding-right: 20px;
+        padding-bottom: 0;
+    }
+
+    .selected.active {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+    }
+
+    
+    dialog {
+        width: 70%;
+        left: 15%;
+    }
+}
